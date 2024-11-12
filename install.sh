@@ -1,6 +1,6 @@
 #!/usr/bin/env  -S  bash -xuo pipefail
-mkdir -p /mnt/dvd
-mount /dev/sr1 /mnt/dvd/
+#mkdir -p /mnt/dvd
+#mount /dev/sr1 /mnt/dvd/
 apt-get update
 export DEBIAN_FRONTEND=noninteractive
 apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
@@ -15,7 +15,7 @@ EOF
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-control-node.txt
-ansible-galaxy collection install brightcomputing.installer100
+ansible-galaxy collection install -r requirements.yml
 ansible-playbook -i inventory/hosts playbook.yml
 systemctl enable tftpd.socket
 systemctl start tftpd.socket
