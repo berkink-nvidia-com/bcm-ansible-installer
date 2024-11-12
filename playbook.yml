@@ -1,21 +1,18 @@
 ---
-tasks:
-  - name: Install requirements
-    hosts: head_node
-    connection: local
-    gather_facts: true
-    become: true
-    collections:
-    # Install a collection from Ansible Galaxy.
-    - name: brightcomputing.installer100
-    pip: 
-      requirements: requirements-control-node.txt
-      virtualenv: venv
-  
-  - name: Install Bright head node
-    hosts: head_node
-    connection: local
-    gather_facts: true
-    become: true
-    roles:
-      - role: brightcomputing.installer100.head_node
+- hosts: head_node
+  become: true
+  gather_facts: true
+  connection: local
+
+  tasks:
+    - name: Install requirements
+      collections:
+      # Install a collection from Ansible Galaxy.
+      - name: brightcomputing.installer100
+      pip: 
+        requirements: requirements-control-node.txt
+        virtualenv: venv
+
+    - name: Install Bright head node
+      roles:
+        - role: brightcomputing.installer100.head_node
