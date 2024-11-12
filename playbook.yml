@@ -29,7 +29,7 @@
         virtualenv_python: python3.10
         virtualenv: /home/ubuntu/bcm-ansible-installer/venv
 
-    - template: src=warpper.sh dest=/home/ubuntu/bcm-ansible-installer/venv/exec mode=755
+    - template: src=wrapper.sh dest=/home/ubuntu/bcm-ansible-installer/venv/exec mode=755
 
 #    collections:
 #      - name: "brightcomputing.installer100"
