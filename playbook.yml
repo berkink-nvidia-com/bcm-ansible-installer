@@ -29,9 +29,13 @@
         virtualenv_python: python3.10
         virtualenv: /home/ubuntu/bcm-ansible-installer/venv
 
-    collections:
-      - name: "brightcomputing.installer100"
-        type : galaxy
+#    collections:
+#      - name: "brightcomputing.installer100"
+#        type : galaxy
+    - name: Install roles from Ansible Galaxy
+      command: ansible-galaxy install brightcomputing.installer100
+#    - name: Import a brightcomputing.installer100
+#      ansible.builtin.import_playbook: "brightcomputing.installer100"
 #      pip: 
 #        requirements: requirements-control-node.txt
 #        virtualenv: venv
