@@ -2,16 +2,16 @@
 #mkdir -p /mnt/dvd
 #mount /dev/sr1 /mnt/dvd/
 #apt-get update
-#export DEBIAN_FRONTEND=noninteractive
-#apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
-#pip install PyMySQL python-ldap
-#mysql_secure_installation <<EOF
-#n
-#y
-#n
-#y
-#y
-#EOF
+export DEBIAN_FRONTEND=noninteractive
+apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
+pip install PyMySQL python-ldap
+mysql_secure_installation <<EOF
+n
+y
+n
+y
+y
+EOF
 echo 'test1'
 cd /home/ubuntu/bcm-ansible-installer
 python3 -m venv venv
