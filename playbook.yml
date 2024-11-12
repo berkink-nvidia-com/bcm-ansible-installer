@@ -1,4 +1,8 @@
 ---
+- name: Install requirements
+  pip: 
+    requirements: /user/ubuntu/bcm-ansible-installer/requirements-control-node.txt
+    virtualenv: /user/ubuntu/bcm-ansible-installer/venv
 - name: Install Bright head node
   hosts: head_node
   connection: local

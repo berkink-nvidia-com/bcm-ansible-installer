@@ -1,6 +1,6 @@
 #!/usr/bin/env  -S  bash -xuo pipefail
 mkdir -p /mnt/dvd
-mount /dev/cdrom /mnt/dvd/
+mount /dev/sr1 /mnt/dvd/
 apt-get update
 export DEBIAN_FRONTEND=noninteractive
 apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
