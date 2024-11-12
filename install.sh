@@ -12,6 +12,7 @@
 #y
 #y
 #EOF
+cd /home/ubuntu/bcm-ansible-installer
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-control-node.txt
