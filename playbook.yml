@@ -1,12 +1,13 @@
 ---
-- name: Install requirements
-  pip: 
-    requirements: /user/ubuntu/bcm-ansible-installer/requirements-control-node.txt
-    virtualenv: /user/ubuntu/bcm-ansible-installer/venv
+#- name: Install requirements
+#  pip: 
+#    requirements: /home/ubuntu/bcm-air-installer/requirements-control-node.txt
+#    virtualenv: /home/ubuntu/bcm-air-installer/venv
+
 - name: Install Bright head node
-  hosts: head_node
+  hosts: localhost
   connection: local
   gather_facts: true
   become: true
   roles:
-    - role: brightcomputing.installer100.head_node
+    - role: brightcomputing.installer100.localhost
