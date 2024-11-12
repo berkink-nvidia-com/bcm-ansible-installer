@@ -8,7 +8,8 @@
     - name: Install requirements
 #      collections:
 #        - name: brightcomputing.installer100
-      ansible.builtin.pip:
+      pip:
+#      ansible.builtin.pip:
         requirements: requirements-control-node.txt
         virtualenv_python: python3
         virtualenv: venv
