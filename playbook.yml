@@ -29,8 +29,9 @@
         virtualenv_python: python3.10
         virtualenv: /home/ubuntu/bcm-ansible-installer/venv
 
-  collections:
-    - name: "brightcomputing.installer100"
+    collections:
+      - name: "brightcomputing.installer100"
+        type : galaxy
 #      pip: 
 #        requirements: requirements-control-node.txt
 #        virtualenv: venv
