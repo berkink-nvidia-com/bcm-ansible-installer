@@ -9,7 +9,7 @@
       apt:
         pkg:
         - python3-pip
-        - python-virtualenv
+        - python3.10-venv
         state: present
         update_cache: yes
 
