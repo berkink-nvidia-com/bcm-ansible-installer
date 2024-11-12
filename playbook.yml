@@ -8,9 +8,15 @@
     - name: Install requirements
 #      collections:
 #        - name: brightcomputing.installer100
-      pip: 
+      ansible.builtin.pip:
         requirements: requirements-control-node.txt
+        virtualenv_python: python3
         virtualenv: venv
+#      pip: 
+#        requirements: requirements-control-node.txt
+#        virtualenv: venv
+
+
 
     - name: Install Bright head node
       roles:
