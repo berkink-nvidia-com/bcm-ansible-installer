@@ -42,8 +42,8 @@
 #        requirements: requirements-control-node.txt
 #        virtualenv: venv
 
-#    - name: Install Bright head node
-#      include_role: 
-#        name: "brightcomputing.installer100.head_node"
+    - name: Install Bright head node
+      include_role: 
+        name: "brightcomputing.installer100.head_node"
 #      roles:
 #        - role: "brightcomputing.installer100.head_node"
