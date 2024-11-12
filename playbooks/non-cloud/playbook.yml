@@ -1,0 +1,8 @@
+---
+- name: Install Bright head node
+  hosts: head_node
+  connection: local
+  gather_facts: true
+  become: true
+  roles:
+    - role: brightcomputing.installer100.head_node

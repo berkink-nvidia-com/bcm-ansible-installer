@@ -1,0 +1,21 @@
+---
+# General cluster settings
+external_interface: eth1
+external_ip_address: DHCP
+  #external_network_gateway: "{{ ansible_facts[external_interface].ipv4.address }}"
+management_interface: eth0
+management_ip_address: 192.168.200.254
+management_network_baseaddress: 192.168.200.0
+management_network_netmask: 24
+external_name_servers: [10.2.200.200]
+install_medium: dvd
+install_medium_dvd_path: "/mnt/dvd"
+timezone: UTC
+license:
+  country: NL
+  state: Amsterdam
+  locality: Amsterdam
+  organization: Bright Computing
+  organizational_unit: Engineering 
+  cluster_name: BrightCluster
+  mac: "{{ ansible_default_ipv4.macaddress }}"

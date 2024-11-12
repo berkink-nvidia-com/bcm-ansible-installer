@@ -1,0 +1,2 @@
+[head_node]
+vm ansible_host=host.example.com ansible_user=adminUser
