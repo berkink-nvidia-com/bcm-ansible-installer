@@ -1,8 +1,8 @@
 ---
-#- name: Install requirements
-#  pip: 
-#    requirements: /home/ubuntu/bcm-air-installer/requirements-control-node.txt
-#    virtualenv: /home/ubuntu/bcm-air-installer/venv
+- name: Install requirements
+  pip: 
+    requirements: /home/ubuntu/bcm-air-installer/requirements-control-node.txt
+    virtualenv: /home/ubuntu/bcm-air-installer/venv
 
 - name: Install Bright head node
   hosts: head_node
