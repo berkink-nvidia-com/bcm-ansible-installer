@@ -1,4 +1,5 @@
 ---
+
 - name: Install requirements
   hosts: head_node
   connection: local
@@ -8,8 +9,8 @@
   # Install a collection from Ansible Galaxy.
   - name: brightcomputing.installer100
   pip: 
-    requirements: /home/ubuntu/bcm-air-installer/requirements-control-node.txt
-    virtualenv: /home/ubuntu/bcm-air-installer/venv
+    requirements: requirements-control-node.txt
+    virtualenv: venv
 
 - name: Install Bright head node
   hosts: head_node
