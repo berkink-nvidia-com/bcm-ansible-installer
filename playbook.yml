@@ -5,9 +5,9 @@
 #    virtualenv: /home/ubuntu/bcm-air-installer/venv
 
 - name: Install Bright head node
-  hosts: localhost
+  hosts: head_node
   connection: local
   gather_facts: true
   become: true
   roles:
-    - role: brightcomputing.installer100.localhost
+    - role: brightcomputing.installer100.head_node
