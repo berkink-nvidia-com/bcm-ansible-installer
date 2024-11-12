@@ -7,8 +7,7 @@
   tasks:
     - name: Install requirements
       collections:
-      # Install a collection from Ansible Galaxy.
-      - name: brightcomputing.installer100
+        - name: brightcomputing.installer100
       pip: 
         requirements: requirements-control-node.txt
         virtualenv: venv
