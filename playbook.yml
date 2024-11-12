@@ -13,7 +13,7 @@
         virtualenv_python: python3
         virtualenv: venv
       collections:
-        - name: brightcomputing.installer100
+        - name: "brightcomputing.installer100"
 #      pip: 
 #        requirements: requirements-control-node.txt
 #        virtualenv: venv
@@ -22,4 +22,4 @@
 
     - name: Install Bright head node
       roles:
-        - role: brightcomputing.installer100.head_node
+        - role: "brightcomputing.installer100.head_node"
