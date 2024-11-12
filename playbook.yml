@@ -5,20 +5,27 @@
   connection: local
 
   tasks:
+    - name: install webserver components
+       apt:
+         pkg:
+         - apache2
+         - libapache2-mod-wsgi-py3
+         - python3-pip
+         - python-virtualenv
+         state: present
+         update_cache: yes
+         
     - name: Install requirements
-
-      pip:
-#      ansible.builtin.pip:
-        requirements: requirements-control-node.txt
-        virtualenv_python: python3
-        virtualenv: venv
+       pip:
+#     ansible.builtin.pip:
+       requirements: requirements-control-node.txt
+       virtualenv_python: python3
+       virtualenv: venv
 #      collections:
 #        - name: "brightcomputing.installer100"
 #      pip: 
 #        requirements: requirements-control-node.txt
 #        virtualenv: venv
-
-
 
     - name: Install Bright head node
       include_role: 
