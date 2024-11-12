@@ -1,17 +1,17 @@
 #!/usr/bin/env  -S  bash -xuo pipefail
 #mkdir -p /mnt/dvd
 #mount /dev/sr1 /mnt/dvd/
-apt-get update
-export DEBIAN_FRONTEND=noninteractive
-apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
-pip install PyMySQL python-ldap
-mysql_secure_installation <<EOF
-n
-y
-n
-y
-y
-EOF
+#apt-get update
+#export DEBIAN_FRONTEND=noninteractive
+#apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
+#pip install PyMySQL python-ldap
+#mysql_secure_installation <<EOF
+#n
+#y
+#n
+#y
+#y
+#EOF
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-control-node.txt
