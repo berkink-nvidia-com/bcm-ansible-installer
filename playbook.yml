@@ -5,19 +5,28 @@
   connection: local
 
   tasks:
-    - name: install webserver components
-      apt:
-        pkg:
-        - python3-pip
-        - python3.10-venv
-        state: present
-        update_cache: yes
+#    - name: install venv components
+#      apt:
+#        pkg:
+#        - python3-pip
+#        - python3.10-venv
+#        state: present
+#        update_cache: yes
+
+    - name: Install virtualenv via pip
+      pip:
+        name: virtualenv
+        executable: pip3
+      tags:
+        - venv
+      environment:
+        PATH: "{{ ansible_env.PATH }}:{{ ansible_user_dir }}/.local/bin"
 
     - name: Install requirements
       pip:
 #     ansible.builtin.pip:
         requirements: /home/ubuntu/bcm-ansible-installer/requirements-control-node.txt
-        virtualenv_python: python3
+        virtualenv_python: python3.10
         virtualenv: /home/ubuntu/bcm-ansible-installer/venv
 #      collections:
 #        - name: "brightcomputing.installer100"
