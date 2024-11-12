@@ -12,12 +12,14 @@
 #y
 #y
 #EOF
+echo 'test1'
 cd /home/ubuntu/bcm-ansible-installer
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-control-node.txt
 ansible-galaxy collection install -r requirements.yml
 ansible-playbook -i inventory/hosts playbook.yml
+echo 'test2'
 systemctl enable tftpd.socket
 systemctl start tftpd.socket
 export MODULES_USE_COMPAT_VERSION=1
