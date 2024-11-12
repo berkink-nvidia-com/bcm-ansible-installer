@@ -6,8 +6,8 @@
 
   tasks:
     - name: Install requirements
-      collections:
-        - name: brightcomputing.installer100
+#      collections:
+#        - name: brightcomputing.installer100
       pip: 
         requirements: requirements-control-node.txt
         virtualenv: venv
