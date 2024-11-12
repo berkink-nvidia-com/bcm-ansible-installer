@@ -33,7 +33,7 @@
 #      - name: "brightcomputing.installer100"
 #        type : galaxy
     - name: Install roles from Ansible Galaxy
-      command: ansible-galaxy install brightcomputing.installer100
+      command: ansible-galaxy collection install brightcomputing.installer100
 #    - name: Import a brightcomputing.installer100
 #      ansible.builtin.import_playbook: "brightcomputing.installer100"
 #      pip: 
