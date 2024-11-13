@@ -1,9 +1,11 @@
 #!/usr/bin/env  -S  bash -xuo pipefail
+
 #mkdir -p /mnt/dvd
 #mount /dev/sr1 /mnt/dvd/
 #apt-get update
+
 export DEBIAN_FRONTEND=noninteractive
-apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
+#apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
 pip install PyMySQL python-ldap
 mysql_secure_installation <<EOF
 n
@@ -12,14 +14,14 @@ n
 y
 y
 EOF
-echo 'test1'
+git clone https://berkink%40nvidia.com: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@github.com/berkink-nvidia-com/bcm-ansible-installer.git /home/ubuntu/bcm-ansible-installer
 cd /home/ubuntu/bcm-ansible-installer
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-control-node.txt
 ansible-galaxy collection install -r requirements.yml
 ansible-playbook -i inventory/hosts playbook.yml
-echo 'test2'
+
 systemctl enable tftpd.socket
 systemctl start tftpd.socket
 export MODULES_USE_COMPAT_VERSION=1
