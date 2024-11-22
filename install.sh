@@ -2,12 +2,15 @@
 
 #mkdir -p /mnt/dvd
 #mount /dev/sr1 /mnt/dvd/
-#apt-get update
+apt-get update
 
 export DEBIAN_FRONTEND=noninteractive
-#apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv mariadb-server
-pip install PyMySQL python-ldap
+apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv python3.10-venv python3-pip ansible  python3-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
+
+apt install -y mariadb-server-10.6
+pip install -y PyMySQL python-ldap
 mysql_secure_installation <<EOF
+
 n
 y
 n
@@ -29,6 +32,6 @@ export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles
 source /cm/local/apps/environment-modules/current/init/bash
 module load cmsh
 module load cm-image
-mkdir -p /mnt/dvd
-mount /dev/cdrom /mnt/dvd/
+#mkdir -p /mnt/dvd
+#mount /dev/cdrom /mnt/dvd/
 cm-lite-daemon-repo /mnt/dvd
