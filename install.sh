@@ -9,7 +9,7 @@ apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3.10-venv
 
 #apt install -y mariadb-server-10.6
 apt install -y mariadb-server
-pip install -y PyMySQL python-ldap
+pip install PyMySQL python-ldap
 mysql_secure_installation <<EOF
 
 y
