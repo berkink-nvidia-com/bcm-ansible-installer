@@ -37,6 +37,6 @@ export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles
 source /cm/local/apps/environment-modules/current/init/bash
 module load cmsh
 module load cm-image
-#mkdir -p /mnt/dvd
-#mount /dev/cdrom /mnt/dvd/
+mkdir -p /mnt/dvd
+mount /dev/cdrom /mnt/dvd/
 cm-lite-daemon-repo /mnt/dvd
