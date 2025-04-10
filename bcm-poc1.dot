@@ -2,7 +2,7 @@ graph "bcm-air-moshe1" {
   "oob-mgmt-server"  [function="oob-server" cpu="2" memory="2048"]
   "oob-mgmt-switch"  [function="oob-switch" mgmt_ip="192.168.200.251"]
 
-  "bcm-headnode0" [memory="16048" cdrom="bcm-10.0-ubuntu2204-10.25.03" os="generic/ubuntu2204" cpu="16" cpu_mode="host-model" storage="200"  mgmt_ip="192.168.200.254"]
+  "bcm-headnode0" [memory="16048" cdrom="bcm-10.25.03-ubuntu2204" os="generic/ubuntu2204" cpu="16" cpu_mode="host-model" storage="200"  mgmt_ip="192.168.200.254"]
   "compute0" [function="server" memory="2048" os="pxe" cpu="4" boot="network" cpu_mode="host-model" storage="50" mgmt_ip="192.168.200.14"]
   "compute1" [function="server" memory="2048" os="pxe" cpu="4" boot="network" cpu_mode="host-model" storage="50" mgmt_ip="192.168.200.15"]
   "compute2" [function="server" memory="2048" os="pxe" cpu="4" boot="network" cpu_mode="host-model" storage="50" mgmt_ip="192.168.200.16"]
