@@ -28,6 +28,6 @@
 
     - name: Install Bright head node
       include_role: 
-        name: "brightcomputing.installer100.head_node"
+        name: "brightcomputing.installer110.head_node"
 #      roles:
-#        - role: "brightcomputing.installer100.head_node"
+#        - role: "brightcomputing.installer110.head_node"
