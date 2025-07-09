@@ -2,17 +2,17 @@
 
 #mkdir -p /mnt/dvd
 #mount /dev/sr1 /mnt/dvd/
-apt-get update
+#apt-get update
 
 systemctl stop unattended-upgrades
 systemctl disable --now unattended-upgrades
 sed -i 's/Unattended-Upgrade "1"/Unattended-Upgrade "0"/g' /etc/apt/apt.conf.d/20auto-upgrades
 
-export DEBIAN_FRONTEND=noninteractive
+#export DEBIAN_FRONTEND=noninteractive
 #apt install -y --no-install-recommends libldap2-dev libsasl2-dev python3-venv python3-pymysql python3-ldap python3-pip ansible python3-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
 
 #apt install -y mariadb-server-10.6
-apt install -y mariadb-server
+#apt install -y mariadb-server
 pip install PyMySQL python-ldap
 
 mysql_secure_installation <<EOF
