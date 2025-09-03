@@ -1,0 +1,2 @@
+exclude_distribution_packages:
+  - libglapi-mesa
