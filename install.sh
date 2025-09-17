@@ -27,7 +27,7 @@ y
 y
 EOF
 
-git clone https://berkink%40nvidia.com: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@github.com/berkink-nvidia-com/bcm-ansible-installer.git /home/ubuntu/bcm-ansible-installer
+git clone https://github.com/berkink-nvidia-com/bcm-ansible-installer.git /home/ubuntu/bcm-ansible-installer
 cd /home/ubuntu/bcm-ansible-installer
 python3 -m venv venv
 source venv/bin/activate
