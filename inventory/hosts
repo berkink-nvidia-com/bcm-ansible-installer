@@ -6,4 +6,4 @@ ansible_password=nvidia
 
 
 [head_node]
-localhost cm_create_image_extra_args="--excludedist nvidia-firmware-570,nvidia-persistenced,nvidia-kernel-common-570,nvidia-kernel-common-570-server,libglapi-mesa,libnvidia-egl-gbm1,libnvidia-egl-xcb1,libnvidia-egl-xlib1"
+localhost cm_create_image_extra_args="--excludedist libnvidia-compute-570,nvidia-compute-utils-570,nvidia-utils-570,nvidia-firmware-570,nvidia-persistenced,nvidia-kernel-common-570,nvidia-kernel-common-570-server,libglapi-mesa,libnvidia-egl-gbm1,libnvidia-egl-xcb1,libnvidia-egl-xlib1"
