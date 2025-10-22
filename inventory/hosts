@@ -6,4 +6,4 @@ ansible_password=nvidia
 
 
 [head_node]
-localhost
+localhost cm_create_image_extra_args="--excludedist nvidia-persistenced,nvidia-kernel-common,nvidia-dkms-570-open,nvidia-driver-570-open,nvidia-open-570"
