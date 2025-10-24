@@ -3,6 +3,7 @@ ansible_user=ubuntu
 ansible_ssh_pass=nvidia
 ansible_become_pass=nvidia
 ansible_password=nvidia
+slapd_restart_wait_time=20
 
 
 [head_node]
