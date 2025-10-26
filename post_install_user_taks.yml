@@ -1,0 +1,30 @@
+- name: Add DNSSEC validation configuration
+  ansible.builtin.blockinfile:
+    path: /etc/bind/named.conf.global.options.include
+    block: |
+      dnssec-validation no;
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - DNSSEC"
+    create: yes
+  register: dnssec_config
+
+- name: Add Google DNS server configuration
+  ansible.builtin.blockinfile:
+    path: /etc/bind/named.conf.include
+    block: |
+      server 8.8.8.8 {
+          edns no;
+      };
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - Google DNS"
+    create: yes
+  register: google_dns_config
+
+- name: Restart named service
+  ansible.builtin.systemd:
+    name: named
+    state: restarted
+  when: dnssec_config.changed or google_dns_config.changed
+
+- name: Install patched BCM cluster-tools package
+  ansible.builtin.apt:
+    deb: /root/cluster-tools_11.0-123247-cm11.0-ffb7616912_amd64.deb
+    state: present
