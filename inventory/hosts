@@ -8,4 +8,4 @@ post_install_user_taskfile=post_install_user_tasks.yml
 
 
 [head_node]
-localhost
+localhost cm_create_image_extra_args="--custom-pre-install-script /root/bcm-ansible-installer/force-apt-ipv4.sh --excludedist libglapi-mesa,libnvidia-compute-570,libnvidia-egl-gbm1,libnvidia-egl-xcb1,libnvidia-egl-xlib1,libnvidia-nscq-570,nvidia-compute-utils-570,nvidia-fabricmanager-570,nvidia-firmware-570,nvidia-imex-570,nvidia-kernel-common-570,nvidia-kernel-common-570-server,nvidia-persistenced,nvidia-utils-570"
