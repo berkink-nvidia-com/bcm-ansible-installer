@@ -8,4 +8,4 @@ post_install_user_taskfile=post_install_user_tasks.yml
 
 
 [head_node]
-localhost cm_create_image_extra_args="--custom-pre-install-script /root/bcm-ansible-installer/force-apt-ipv4.sh --excludedist libglapi-mesa,slurm24.11"
+localhost cm_create_image_extra_args="--excludedist libglapi-mesa,slurm24.11"
