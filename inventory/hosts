@@ -8,4 +8,4 @@ post_install_user_taskfile=post_install_user_tasks.yml
 
 
 [head_node]
-localhost cm_create_image_extra_args="--excludedist libglapi-mesa,slurm24.11"
+localhost
