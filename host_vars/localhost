@@ -1,3 +1,2 @@
 exclude_distribution_packages:
   - libglapi-mesa
-  - slurm24.11
