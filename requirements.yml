@@ -4,3 +4,4 @@ collections:
   # Install a collection from Ansible Galaxy.
   - name: brightcomputing.installer110
     version: "31.0.448+gitd75af15"
+
