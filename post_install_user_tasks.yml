@@ -23,3 +23,9 @@
     name: named
     state: restarted
   when: dnssec_config.changed or google_dns_config.changed
+
+- name: Install patched BCM cluster-tools package
+  ansible.builtin.apt:
+    deb: /root/cluster-tools_11.0-123399-cm11.0-77e24e0622_amd64.deb
+    state: present
+  when: dnssec_config.changed or google_dns_config.changed
